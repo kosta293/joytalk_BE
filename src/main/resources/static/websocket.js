@@ -1,8 +1,12 @@
 let websocket;
 
 function onOpen() {
+<<<<<<< HEAD
+  websocket.send("connected");
+=======
   let username = document.getElementById("username");
   websocket.send(username.value + ":" + "connected");
+>>>>>>> 72ff7318115a66be059919135860f65f8a1d2adf
   console.log("connected: onOpen()");
 }
 
@@ -33,10 +37,16 @@ function disconnect() {
 }
 
 function sendMessage() {
+<<<<<<< HEAD
+  let message = document.getElementById("message");
+
+  websocket.send(message.value);
+=======
   let username = document.getElementById("username");
   let message = document.getElementById("message");
 
   websocket.send(username.value + ":" +message.value);
+>>>>>>> 72ff7318115a66be059919135860f65f8a1d2adf
   message.value = "";
   console.log("sent: send()");
 }
