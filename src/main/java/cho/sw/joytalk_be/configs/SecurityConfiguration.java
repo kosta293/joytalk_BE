@@ -19,7 +19,7 @@ public class SecurityConfiguration {
         httpSecurity
                 .authorizeHttpRequests(request -> request.anyRequest().authenticated())
                 .oauth2Login(Customizer.withDefaults())
-//                .formLogin(Customizer.withDefaults())
+                .formLogin(Customizer.withDefaults())
                 .csrf(csrf -> csrf.disable());
 
         return httpSecurity.build();
